@@ -1,113 +1,150 @@
-body{
+body {
   margin: 0;
   padding: 0;
-  background-color: rgb(149, 200, 235);
+  background-color: #90a6cf;
+  font-family: 'Shadows Into Light', cursive;
+  color: #63728f;
+}
+.wrapper{
+  width: 40%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 2rem;
+  margin: 2rem auto 0;
+  background: #ebd4f2;
+    border-radius: 2rem;
 }
 
-.mem-slider{
-  width: 45%;
-  margin: 3% auto 0;
+.mem-slider {
   overflow: hidden;
 }
 
-.slides-wrap{
+.slides-wrap {
   width: 500%;
-  height: 100%;
   display: flex;
 }
-.slide{
+
+.slide {
   width: 20%;
   transition: 0.6s;
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-.slide img{
+
+.slide img {
   width: 100%;
   height: 100%;
 }
-#sl1:checked ~ .slides-wrap .s1{
+
+#sl1:checked~.slides-wrap .s1 {
   margin-left: 0;
 }
 
-#sl2:checked ~ .slides-wrap .s2{
+#sl2:checked~.slides-wrap .s2 {
   margin-left: -20%;
 }
-#sl3:checked ~ .slides-wrap .s3{
+
+#sl3:checked~.slides-wrap .s3 {
   margin-left: -40%;
 }
-#sl4:checked ~ .slides-wrap .s4{
+
+#sl4:checked~.slides-wrap .s4 {
   margin-left: -60%;
 }
-#sl5:checked ~ .slides-wrap .s5{
+
+#sl5:checked~.slides-wrap .s5 {
   margin-left: -80%;
 }
-input[name='sl']{
+
+input[name='sl'] {
   display: none;
 }
 
-.nav{
-  margin-top: 2rem;
+.nav {
+  align-items: center;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
 }
 
-.point{
-  width: 15px;
-  height: 15px;
-  border: 3px solid rgb(97, 100, 146);
-  background-color: rgb(97, 100, 146);
-  border-radius: 50%;
-  transition: 0.4s;
-  margin-right: 2rem;
+.point {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  
 }
-.point:nth-child(5){
+
+.point div {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #90a6cf;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-color: #90a6cf;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.point:nth-child(5) {
   margin-right: 0;
 }
 
-.navigation{
+.navigation {
+  height: 5rem;
+  align-items: center;
   display: flex;
-  width: 30%;
-  justify-content: space-between;
+  width: 50%;
+  justify-content: flex-end;
 }
-label{
+
+label {
   display: block;
 }
-.span-container{
+
+.span-container {
   overflow: hidden;
-  width: 70%;
+  width: 50%;
   display: flex;
 }
-.txt{
-  padding-left: 100%;
+
+.txt {
+  margin-left: 100%;
+  display: block;
+  white-space: pre;
+  font-size: 2rem;
   transition: 0.6s;
 }
-#sl1:checked ~ .nav .span-container .t1,
-#sl2:checked ~ .nav .span-container .t2,
-#sl3:checked ~ .nav .span-container .t3,
-#sl4:checked ~ .nav .span-container .t4,
-#sl5:checked ~ .nav .span-container .t5{
-  padding-left: 0;
+
+#sl1:checked~.nav .span-container .t1,
+#sl2:checked~.nav .span-container .t2,
+#sl3:checked~.nav .span-container .t3,
+#sl4:checked~.nav .span-container .t4,
+#sl5:checked~.nav .span-container .t5 {
+  margin-left: 0;
   order: -1;
 }
 
-#sl1:checked ~ .nav .navigation .p1,
-#sl2:checked ~ .nav .navigation .p2,
-#sl3:checked ~ .nav .navigation .p3,
-#sl4:checked ~ .nav .navigation .p4,
-#sl5:checked ~ .nav .navigation .p5{
+#sl1:checked~.nav .navigation .p1 div,
+#sl2:checked~.nav .navigation .p2 div,
+#sl3:checked~.nav .navigation .p3 div,
+#sl4:checked~.nav .navigation .p4 div,
+#sl5:checked~.nav .navigation .p5 div {
   background-color: transparent;
-  border: 3px solid rgb(97, 100, 146);
+  border: 1px solid #90a6cf;
+  transition: all 0.5s ease-in-out;
 }
-.point:hover{
-  border: 3px solid rgb(255, 255, 255);
+
+.point:hover div {
+  border: 1px solid rgb(255, 255, 255);
   background-color: rgb(255, 255, 255);
-}
-#sl1:checked ~ .nav .navigation .p1:hover,
-#sl2:checked ~ .nav .navigation .p2:hover,
-#sl3:checked ~ .nav .navigation .p3:hover,
-#sl4:checked ~ .nav .navigation .p4:hover,
-#sl5:checked ~ .nav .navigation .p5:hover{
-  border: 3px solid rgb(255, 255, 255);
+  transition: all 0.5s ease-in-out;
 }
 
-
+#sl1:checked~.nav .navigation .p1:hover div,
+#sl2:checked~.nav .navigation .p2:hover div,
+#sl3:checked~.nav .navigation .p3:hover div,
+#sl4:checked~.nav .navigation .p4:hover div,
+#sl5:checked~.nav .navigation .p5:hover div {
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.5s ease-in-out;
+}
