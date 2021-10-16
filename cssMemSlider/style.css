@@ -3,14 +3,14 @@ body {
   padding: 0;
   background-color: #90a6cf;
   font-family: 'Shadows Into Light', cursive;
-  color: #63728f;
+  color: #333b48;
 }
 .wrapper{
   width: 40%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   padding: 2rem;
   margin: 2rem auto 0;
-  background: #ebd4f2;
+  background: #aebdd9;
     border-radius: 2rem;
 }
 
@@ -111,7 +111,7 @@ label {
   margin-left: 100%;
   display: block;
   white-space: pre;
-  font-size: 2rem;
+  font-size: 2.5rem;
   transition: 0.6s;
 }
 
@@ -147,4 +147,23 @@ label {
 #sl5:checked~.nav .navigation .p5:hover div {
   border: 1px solid rgb(255, 255, 255);
   transition: all 0.5s ease-in-out;
+}
+@media (max-width: 700px){
+  .wrapper {
+    width: 70%;
+    padding: 1.2rem;
+  }
+  .nav{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .span-container {
+     width: 100%;
+  }
+  .navigation {
+    height: 3rem;
+    width: 100%;
+    justify-content: center;
+}
+
 }
