@@ -154,6 +154,7 @@ label {
     padding: 1.2rem;
   }
   .nav{
+    margin-bottom: 1rem;
     flex-direction: column;
     justify-content: center;
   }
@@ -161,6 +162,7 @@ label {
      width: 100%;
   }
   .navigation {
+    order: -1;
     height: 3rem;
     width: 100%;
     justify-content: center;
